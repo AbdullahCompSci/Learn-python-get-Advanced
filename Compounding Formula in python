@@ -1,0 +1,17 @@
+#get input from user as investment
+investment = float(input("Enter investment amount: "))
+
+#get input from user how much investment
+interest_rate = float(input("Enter interest rate: "))
+
+#get input how much percentage growth per month
+years = int(input("Enter number of years: "))
+
+#get how many months or year will compound
+months = years * 12
+
+#print result for every month compounding
+for i in range(months):
+    investment += investment * interest_rate / 12
+
+print("Investment after", months, "months:", round(investment, 2))
